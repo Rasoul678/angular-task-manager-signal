@@ -1,0 +1,16 @@
+<form class="mb-4" (submit)="onSubmit($event)">
+  <input
+    type="text"
+    [(ngModel)]="title"
+    name="title"
+    placeholder="New task"
+    class="border p-2 w-2/3"
+    required
+  />
+  <select [(ngModel)]="priority" name="priority" class="border p-[0.6rem]">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+  <button class="ml-2 bg-blue-600 text-white px-4 py-2 rounded">Add</button>
+</form>
