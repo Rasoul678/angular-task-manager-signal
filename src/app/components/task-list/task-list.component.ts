@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 import { TaskService } from "../../services/task.service";
-import { CommonModule } from "@angular/common";
+import { CommonModule, TitleCasePipe } from "@angular/common";
 
 @Component({
   selector: "app-task-list",
-  imports: [CommonModule],
+  imports: [CommonModule, TitleCasePipe],
   templateUrl: "./task-list.html",
   styleUrl: "./task-list.css",
 })

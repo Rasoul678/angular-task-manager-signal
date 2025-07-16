@@ -7,11 +7,12 @@
       type="checkbox"
       [checked]="task.done"
       (change)="tasks.toggleTask(task.id)"
+      class="mx-2"
     />
     <span [class.line-through]="task.done">{{ task.title }}</span>
   </label>
   <div class="flex items-center gap-2">
-    <span class="text-xs text-gray-500">{{ task.priority }}</span>
+    <span class="text-xs text-gray-500">{{ task.priority | titlecase }}</span>
     <button (click)="tasks.deleteTask(task.id)" class="text-red-600">🗑️</button>
   </div>
 </div>
