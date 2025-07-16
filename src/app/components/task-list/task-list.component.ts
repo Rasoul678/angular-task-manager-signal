@@ -8,6 +8,6 @@ import { CommonModule, TitleCasePipe } from "@angular/common";
   templateUrl: "./task-list.html",
   styleUrl: "./task-list.css",
 })
-export class TaskList {
+export class TaskListComponent {
   constructor(public tasks: TaskService) {}
 }

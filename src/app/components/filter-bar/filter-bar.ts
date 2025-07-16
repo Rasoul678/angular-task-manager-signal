@@ -7,7 +7,7 @@ import { TaskService } from "../../services/task.service";
   templateUrl: "./filter-bar.html",
   styleUrl: "./filter-bar.css",
 })
-export class FilterBar {
+export class FilterBarComponent {
   private taskService: TaskService = inject(TaskService);
   filter = this.taskService.filter;
 
