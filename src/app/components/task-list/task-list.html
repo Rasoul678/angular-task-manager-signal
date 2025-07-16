@@ -1,0 +1,18 @@
+<div
+  *ngFor="let task of tasks.filteredTasks()"
+  class="flex justify-between p-2 border rounded mb-2"
+>
+  <label>
+    <input
+      type="checkbox"
+      [checked]="task.done"
+      (change)="tasks.toggleTask(task.id)"
+    />
+    <span [class.line-through]="task.done">{{ task.title }}</span>
+  </label>
+  <div class="flex items-center gap-2">
+    <span class="text-xs text-gray-500">{{ task.priority }}</span>
+    <button (click)="tasks.deleteTask(task.id)" class="text-red-600">🗑️</button>
+  </div>
+</div>
+<p class="text-sm text-gray-600">Done: {{ tasks.doneCount() }}</p>
